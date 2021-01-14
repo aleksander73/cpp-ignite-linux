@@ -39,3 +39,5 @@ cd build
 ./${project_name}
 EOF
 chmod +x run.sh
+
+code .
