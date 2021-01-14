@@ -24,3 +24,11 @@ include_directories(include)
 file(GLOB_RECURSE SOURCES main.cpp "src/*.cpp")
 add_executable($project_name \${SOURCES})
 EOF
+
+# compile.sh
+cat << EOF > compile.sh
+cd build
+cmake ..
+make
+EOF
+chmod +x compile.sh
