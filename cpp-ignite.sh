@@ -1,5 +1,6 @@
 echo "C++ project ignite for Linux"
 read -p "Project name: " project_name
+project_name=$(echo $project_name | tr -d '\r')
 
 mkdir $project_name
 cd $project_name
@@ -14,4 +15,12 @@ int main(int argc, char* argv[]) {
 	std::cout << "Hello world!" << std::endl;
 	return 0;
 }
+EOF
+
+# CMakeLists.txt
+cat << EOF > CMakeLists.txt
+cmake_minimum_required(VERSION 3.5)
+include_directories(include)
+file(GLOB_RECURSE SOURCES main.cpp "src/*.cpp")
+add_executable($project_name \${SOURCES})
 EOF
