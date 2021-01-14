@@ -32,3 +32,10 @@ cmake ..
 make
 EOF
 chmod +x compile.sh
+
+# run.sh
+cat << EOF > run.sh
+cd build
+./${project_name}
+EOF
+chmod +x run.sh
