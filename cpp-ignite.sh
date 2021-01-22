@@ -45,4 +45,9 @@ cd build
 EOF
 chmod +x run.sh
 
+# .gitignore
+cat << EOF > .gitignore
+/build
+EOF
+
 code .
