@@ -9,6 +9,7 @@ The script automates the process of creating a simple C++ project, i.e.
 * adds `CMakeLists.txt` with simple `CMake` build configuration
 * adds `compile.sh` script
 * adds `run.sh` script
+* adds `.gitignore`
 * opens the project in `Visual Studio Code` upon finish
 
 ## Build
